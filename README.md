@@ -1,8 +1,6 @@
 # Active Link Automation & Electrical
 
-Marketing site for **Active Link Automation & Electrical**, a security, automation and electrical business based in Bandar Baru Nilai, Negeri Sembilan.
-
-The site is a static Vite + React + TypeScript build. There is no backend, database or server code. The quote form opens WhatsApp on the visitor’s device.
+Static marketing site for Active Link Automation & Electrical, Bandar Baru Nilai, Negeri Sembilan. Security, automation, and electrical. The quote form builds a WhatsApp message in the browser. There is no server and no database.
 
 ## Run locally
 
@@ -11,7 +9,7 @@ npm install
 npm run dev
 ```
 
-The dev server is [http://127.0.0.1:4317](http://127.0.0.1:4317).
+The dev server is [http://127.0.0.1:47321](http://127.0.0.1:47321). During development the base path is `/`.
 
 ## Production build
 
@@ -20,40 +18,12 @@ npm run build
 npm run preview
 ```
 
-`npm run build` typechecks and writes the static site to `dist/`. Upload that folder, or point a static host at it.
+`npm run build` sets the Vite base to `/active-link-automation/` so asset URLs match a GitHub Pages project site. Preview the built files at [http://127.0.0.1:47322/active-link-automation/](http://127.0.0.1:47322/active-link-automation/).
 
-## Deploy
+The output is the `dist/` folder. Upload those files as static hosting. Do not add a GitHub Actions workflow unless you want one. If the site is served from the domain root instead of `/active-link-automation/`, change `base` in `vite.config.ts` to `/` and build again.
 
-**GitHub Pages** (project site)
+## Contact shown on the site
 
-The production build uses base `/active-link-automation/`, so assets resolve at [https://mohammedbagowabair.github.io/active-link-automation/](https://mohammedbagowabair.github.io/active-link-automation/). Local `npm run dev` stays at `/`. `npm run build` also writes `dist/404.html` (a copy of the page) and ships `public/.nojekyll`.
-
-Publish the `dist/` folder on the `gh-pages` branch. Pages should serve the project site from that branch.
-
-**Netlify**
-
-- Build command: `npm run build`
-- Publish directory: `dist`
-
-**Vercel**
-
-- Framework preset: Vite
-- Build command: `npm run build`
-- Output directory: `dist`
-
-**Any static host**
-
-Upload the contents of `dist/` after `npm run build`. No environment variables are required. Phone, WhatsApp, email and map links are public business details baked into the page.
-
-## What is in the page
-
-- Hero, trust counters (5.0, 1,070+ reviews, established 2014)
-- Filterable services
-- “Which system do you need?” selector
-- CCTV repair, electrical services, industries, process, brand partnerships
-- Google review excerpts, service areas, FAQ
-- Quote form that composes a WhatsApp message in the browser
-- Map, hours, payments and a sticky WhatsApp button
-- LocalBusiness JSON-LD, Open Graph tags and a no-JavaScript contact fallback
-
-Photography is stored in `public/images` (Unsplash) so the built site does not depend on an image CDN.
+- Phone and WhatsApp: +60 16-666 0106
+- Email: activelink0724@gmail.com
+- Workshop: PT 7166, Ground Floor, Jalan BBN 1/1A, Putra Point, Bandar Baru Nilai

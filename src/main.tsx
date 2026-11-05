@@ -1,20 +1,17 @@
-import { StrictMode } from "react"
-import { createRoot } from "react-dom/client"
-import "@fontsource/outfit/latin-300.css"
-import "@fontsource/outfit/latin-400.css"
-import "@fontsource/outfit/latin-500.css"
-import "@fontsource/outfit/latin-600.css"
-import "@fontsource/outfit/latin-700.css"
-import "@fontsource/syne/latin-600.css"
-import "@fontsource/syne/latin-700.css"
-import "@fontsource/syne/latin-800.css"
-import "./index.css"
-import App from "./App"
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "@fontsource/plus-jakarta-sans/400.css";
+import "@fontsource/plus-jakarta-sans/600.css";
+import "@fontsource/plus-jakarta-sans/700.css";
+import "@fontsource/plus-jakarta-sans/800.css";
+import { App } from "./App.tsx";
+import "./styles.css";
 
-document.documentElement.classList.add("js")
+const root = document.getElementById("root");
+if (!root) throw new Error("Root element missing");
 
-createRoot(document.getElementById("root")!).render(
+createRoot(root).render(
   <StrictMode>
     <App />
   </StrictMode>,
-)
+);

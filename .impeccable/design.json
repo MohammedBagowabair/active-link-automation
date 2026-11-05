@@ -1,0 +1,363 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-05T22:52:08Z",
+  "title": "Design System: Active Link Automation & Electrical",
+  "extensions": {
+    "colorMeta": {
+      "void": {
+        "role": "neutral",
+        "displayName": "Void",
+        "canonical": "#04060c",
+        "tonalRamp": ["#080b12", "#21252d", "#3e424b", "#5d616b", "#7e828c", "#a0a5af", "#c4c9d4", "#e9effa"]
+      },
+      "band": {
+        "role": "neutral",
+        "displayName": "Night Band",
+        "canonical": "#070b14",
+        "tonalRamp": ["#070b14", "#20252f", "#3d424e", "#5b616e", "#7c828f", "#9ea5b2", "#c2c9d7", "#e7effd"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Instrument Ink",
+        "canonical": "#e7f6ff",
+        "tonalRamp": ["#040d12", "#1b272d", "#38444b", "#57636b", "#77858d", "#99a7b0", "#bdccd4", "#e2f1fa"]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted Cyan",
+        "canonical": "#c9e7f5",
+        "tonalRamp": ["#000e17", "#0f2833", "#2c4652", "#4b6672", "#6c8794", "#8daab7", "#b1cfdc", "#d6f4ff"]
+      },
+      "on-cyan": {
+        "role": "neutral",
+        "displayName": "On Cyan",
+        "canonical": "#041018",
+        "tonalRamp": ["#020d14", "#192730", "#35444e", "#54646e", "#748590", "#97a8b3", "#baccd8", "#dff2fe"]
+      },
+      "cyan": {
+        "role": "primary",
+        "displayName": "Electric Cyan",
+        "canonical": "#00d4ff",
+        "tonalRamp": ["#000d34", "#002e54", "#004f76", "#007199", "#0094bd", "#00b9e3", "#27dfff", "#62ffff"]
+      },
+      "cyan-hot": {
+        "role": "primary",
+        "displayName": "Hot Cyan",
+        "canonical": "#7aecff",
+        "tonalRamp": ["#001223", "#003041", "#005061", "#007182", "#0093a5", "#3fb7c9", "#6adcef", "#91ffff"]
+      },
+      "line": {
+        "role": "primary",
+        "displayName": "Cyan Line",
+        "canonical": "rgba(0, 212, 255, 0.32)",
+        "tonalRamp": ["#000d34", "#002e54", "#004f76", "#007199", "#0094bd", "#00b9e3", "#27dfff", "#62ffff"]
+      },
+      "violet": {
+        "role": "secondary",
+        "displayName": "Violet Bloom",
+        "canonical": "#8b6cff",
+        "tonalRamp": ["#1d005c", "#2f0080", "#480aa7", "#643dcd", "#8363f5", "#a488ff", "#c7adff", "#ebd3ff"]
+      },
+      "brand": {
+        "role": "tertiary",
+        "displayName": "Brand Blue",
+        "canonical": "#0058a8",
+        "tonalRamp": ["#000046", "#001c69", "#003f8d", "#1161b2", "#3a84d7", "#5ea8fe", "#82cdff", "#a7f3ff"]
+      },
+      "red": {
+        "role": "tertiary",
+        "displayName": "Workshop Red",
+        "canonical": "#a21827",
+        "tonalRamp": ["#390000", "#5f0000", "#86000f", "#ad2630", "#d54e50", "#fe7372", "#ff9895", "#ffbdb9"]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "Badge White",
+        "canonical": "#fff",
+        "tonalRamp": ["#0b0b0b", "#252525", "#424242", "#616161", "#828282", "#a5a5a5", "#c9c9c9", "#eeeeee"]
+      },
+      "field": {
+        "role": "neutral",
+        "displayName": "Field",
+        "canonical": "#071018",
+        "tonalRamp": ["#040c14", "#1c262f", "#39444d", "#57636d", "#78848f", "#9aa7b2", "#becbd7", "#e3f0fd"]
+      },
+      "placeholder": {
+        "role": "neutral",
+        "displayName": "Field Hint",
+        "canonical": "#b7d7e8",
+        "tonalRamp": ["#000e19", "#0c2835", "#2a4654", "#496675", "#698797", "#8baaba", "#afcfe0", "#d4f4ff"]
+      },
+      "alert": {
+        "role": "tertiary",
+        "displayName": "Alert Pink",
+        "canonical": "#ffd0d6",
+        "tonalRamp": ["#1c0107", "#3a191f", "#5b363c", "#7c555a", "#9f757b", "#c4989d", "#eabcc1", "#ffe0e6"]
+      },
+      "alert-border": {
+        "role": "tertiary",
+        "displayName": "Alert Line",
+        "canonical": "#ffb4bc",
+        "tonalRamp": ["#250003", "#460b19", "#682b35", "#8c4b54", "#b06c74", "#d68e96", "#fdb2ba", "#ffd7df"]
+      },
+      "alert-wash": {
+        "role": "tertiary",
+        "displayName": "Alert Wash",
+        "canonical": "rgba(162, 24, 39, 0.35)",
+        "tonalRamp": ["#390000", "#5f0000", "#86000f", "#ad2630", "#d54e50", "#fe7372", "#ff9895", "#ffbdb9"]
+      },
+      "scrim": {
+        "role": "neutral",
+        "displayName": "Void Scrim",
+        "canonical": "rgba(4, 6, 12, 0.94)",
+        "tonalRamp": ["#080b12", "#21252d", "#3e424b", "#5d616b", "#7e828c", "#a0a5af", "#c4c9d4", "#e9effa"]
+      },
+      "ghost": {
+        "role": "neutral",
+        "displayName": "Ghost Fill",
+        "canonical": "rgba(4, 8, 16, 0.45)",
+        "tonalRamp": ["#060b14", "#1f252f", "#3b434d", "#5a626d", "#7b838f", "#9da6b2", "#c1cad7", "#e6effd"]
+      },
+      "plate-hi": {
+        "role": "neutral",
+        "displayName": "Plate High",
+        "canonical": "rgba(10, 24, 42, 0.92)",
+        "tonalRamp": ["#020b1c", "#172639", "#334358", "#526379", "#72849b", "#94a7bf", "#b8cbe4", "#ddf0ff"]
+      },
+      "plate-lo": {
+        "role": "neutral",
+        "displayName": "Plate Low",
+        "canonical": "rgba(5, 10, 18, 0.94)",
+        "tonalRamp": ["#060b14", "#1f262f", "#3b434d", "#5a626d", "#7b838f", "#9da6b2", "#c1cad7", "#e6effc"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline only. Uppercase, one phrase per line, cyan periods."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Service rows and the symptom readout. Audience titles run larger at the same weight."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text. Support copy caps at 65ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase tracked instrument labels, including the viewfinder coordinates."
+      }
+    },
+    "shadows": [
+      {
+        "name": "control-lift",
+        "value": "0 12px 24px rgba(0, 0, 0, 0.35), 0 0 22px rgba(0, 212, 255, 0.28)",
+        "purpose": "Soft black lift plus cyan glow under the filled primary button."
+      },
+      {
+        "name": "plate",
+        "value": "0 22px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(190, 244, 255, 0.16)",
+        "purpose": "Lift and top sheen on the builder, reviews, and quote-form plates."
+      },
+      {
+        "name": "pressed-toggle",
+        "value": "inset 0 0 0 1px #00d4ff, 0 10px 18px rgba(0, 0, 0, 0.28)",
+        "purpose": "Inset cyan edge and short lift on a system row that is on."
+      },
+      {
+        "name": "iris",
+        "value": "0 0 14px #00d4ff",
+        "purpose": "Glow on the camera iris."
+      }
+    ],
+    "motion": [
+      {
+        "name": "tilt",
+        "value": "transform 180ms ease-out",
+        "purpose": "Camera and diagram tilt. Fine pointer only. Resting camera angle is rotateX(14deg) rotateY(-32deg)."
+      },
+      {
+        "name": "sweep",
+        "value": "3.4s linear infinite",
+        "purpose": "Lens sweep across the camera. Removed when reduced motion is set."
+      },
+      {
+        "name": "settle",
+        "value": "420ms ease-out",
+        "purpose": "Diagram lines settle after a site change."
+      },
+      {
+        "name": "press",
+        "value": "translateY(1px)",
+        "purpose": "Pressed buttons shift down 1px. Reduced motion removes the shift."
+      },
+      {
+        "name": "reduced",
+        "value": "animation: none; transition: none; scroll-behavior: auto",
+        "purpose": "prefers-reduced-motion stops sweep, tilt follow, settle, and smooth scrolling. The resting camera angle stays."
+      }
+    ],
+    "breakpoints": [
+      { "name": "site-switch", "value": "700px" },
+      { "name": "columns", "value": "800px" },
+      { "name": "builder", "value": "860px" },
+      { "name": "viewfinder", "value": "960px" },
+      { "name": "nav", "value": "1100px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Filled cyan call control. On-cyan text, control-lift shadow.",
+      "html": "<a class=\"ds-btn-primary\" href=\"tel:+60166660106\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linejoin=\"round\" stroke-linecap=\"round\" d=\"M8 3.8H6.6A1.6 1.6 0 0 0 5 5.4v.9A13 13 0 0 0 17.7 19h.9a1.6 1.6 0 0 0 1.6-1.6V16l-3.7-1.8-1.7 1.7a9.2 9.2 0 0 1-4.5-4.5l1.7-1.7L10 5.9 8 3.8Z\"/></svg>Call the team</a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; min-height: 48px; padding: 0.7rem 1rem; border: 1px solid var(--cyan); border-radius: 2px; background: var(--cyan); color: #041018; font-family: \"Plus Jakarta Sans\", sans-serif; font-weight: 800; letter-spacing: -0.01em; text-decoration: none; cursor: pointer; box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35), 0 0 22px rgba(0, 212, 255, 0.28); } .ds-btn-primary:hover { background: #7aecff; } .ds-btn-primary:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; } .ds-btn-primary:active { transform: translateY(1px); }"
+    },
+    {
+      "name": "Line Button",
+      "kind": "button",
+      "refersTo": "button-line",
+      "description": "Ghost-filled cyan-edged control for the second and third actions.",
+      "html": "<a class=\"ds-btn-line\" href=\"#build\">Build a quote</a>",
+      "css": ".ds-btn-line { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0.7rem 1rem; border: 1px solid rgba(0, 212, 255, 0.72); border-radius: 2px; background: rgba(4, 8, 16, 0.45); color: var(--ink); font-family: \"Plus Jakarta Sans\", sans-serif; font-weight: 800; letter-spacing: -0.01em; text-decoration: none; cursor: pointer; } .ds-btn-line:hover { color: var(--cyan); border-color: var(--cyan); } .ds-btn-line:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; } .ds-btn-line:active { transform: translateY(1px); }"
+    },
+    {
+      "name": "Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Quote-form text field. Cyan caret, alert line when invalid.",
+      "html": "<label class=\"ds-field-label\">Name<input class=\"ds-field\" type=\"text\" placeholder=\"Your name\" /></label>",
+      "css": ".ds-field-label { display: grid; gap: 0.4rem; color: var(--ink); font-family: \"Plus Jakarta Sans\", sans-serif; font-weight: 700; } .ds-field { width: 16rem; min-height: 48px; padding: 0.7rem 0.75rem; color: var(--ink); background: #071018; border: 1px solid rgba(0, 212, 255, 0.45); border-radius: 2px; font-family: inherit; font-size: 1.0625rem; caret-color: var(--cyan); } .ds-field::placeholder { color: #b7d7e8; } .ds-field:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; } .ds-field[aria-invalid=\"true\"] { border-color: #ffb4bc; }"
+    },
+    {
+      "name": "HUD Key",
+      "kind": "chip",
+      "refersTo": "hud-key",
+      "description": "Square site or symptom key. Pressed state fills with cyan.",
+      "html": "<div class=\"ds-keys\"><button class=\"ds-key\" type=\"button\">Home</button><button class=\"ds-key is-on\" type=\"button\" aria-pressed=\"true\">Shop</button></div>",
+      "css": ".ds-keys { display: flex; gap: 0.45rem; } .ds-key { min-height: 48px; min-width: 5.5rem; padding: 0.55rem 0.75rem; color: var(--ink); background: transparent; border: 1px solid rgba(0, 212, 255, 0.4); font-family: \"Plus Jakarta Sans\", sans-serif; font-weight: 700; cursor: pointer; }  .ds-key.is-on, .ds-key[aria-pressed=\"true\"] { background: var(--cyan); color: #041018; border-color: var(--cyan); } .ds-key:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Header links. Ink at rest, cyan on hover, 44px tall.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Sections\"><a href=\"#services\">Services</a><a href=\"#build\">Build</a><a href=\"#contact\">Contact</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 0.1rem; } .ds-nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0.35rem 0.5rem; color: var(--ink); font-family: \"Plus Jakarta Sans\", sans-serif; font-size: 0.95rem; font-weight: 700; text-decoration: none; } .ds-nav a:hover { color: var(--cyan); } .ds-nav a:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }"
+    },
+    {
+      "name": "Glass Plate",
+      "kind": "card",
+      "refersTo": "plate",
+      "description": "Frosted plate for the builder, the reviews, and the quote form.",
+      "html": "<div class=\"ds-plate\"><p class=\"ds-plate-rating\">5.0</p><p class=\"ds-plate-copy\">1,070+ Google reviews</p></div>",
+      "css": ".ds-plate { max-width: 28rem; padding: 1rem; color: var(--ink); background: linear-gradient(180deg, rgba(10, 24, 42, 0.92), rgba(5, 10, 18, 0.94)); border: 1px solid rgba(0, 212, 255, 0.42); box-shadow: 0 22px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(190, 244, 255, 0.16); backdrop-filter: blur(14px); font-family: \"Plus Jakarta Sans\", sans-serif; } .ds-plate-rating { margin: 0 0 0.35rem; font-weight: 800; letter-spacing: -0.04em; font-size: 2.4rem; line-height: 1; font-variant-numeric: tabular-nums; } .ds-plate-copy { margin: 0; color: var(--muted); font-weight: 700; }"
+    },
+    {
+      "name": "Closed Badge",
+      "kind": "chip",
+      "refersTo": "closed-badge",
+      "description": "Sunday closed mark. Workshop red fill, white text.",
+      "html": "<span class=\"ds-closed\">Closed</span>",
+      "css": ".ds-closed { display: inline-block; padding: 0.05rem 0.45rem; color: #fff; background: var(--red); font-family: \"Plus Jakarta Sans\", sans-serif; font-weight: 800; } .ds-closed:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }"
+    },
+    {
+      "name": "Wordmark",
+      "kind": "custom",
+      "description": "Header mark. Brand-blue tile, cyan ring, ink center, Plus Jakarta Sans name.",
+      "html": "<a class=\"ds-brand\" href=\"#top\"><svg viewBox=\"0 0 32 32\" width=\"32\" height=\"32\" aria-hidden=\"true\"><rect x=\"1\" y=\"1\" width=\"30\" height=\"30\" rx=\"7\" fill=\"#0058A8\"/><circle cx=\"16\" cy=\"16\" r=\"7.5\" fill=\"none\" stroke=\"#00D4FF\" stroke-width=\"1.75\"/><circle cx=\"16\" cy=\"16\" r=\"2.4\" fill=\"#E7F6FF\"/></svg><span><span class=\"ds-brand-name\">Active Link</span><span class=\"ds-brand-sub\">Automation &amp; Electrical</span></span></a>",
+      "css": ".ds-brand { display: inline-flex; align-items: center; gap: 0.7rem; color: var(--ink); font-family: \"Plus Jakarta Sans\", sans-serif; text-decoration: none; } .ds-brand-name { display: block; font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; } .ds-brand-sub { display: block; margin-top: 0.1rem; color: var(--muted); font-size: 0.78rem; font-weight: 600; }  .ds-brand:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }"
+    },
+    {
+      "name": "System Toggle",
+      "kind": "button",
+      "refersTo": "sys-toggle",
+      "description": "On/off row in the system builder. Pressed row takes a cyan tint, an inset edge, and a filled flag.",
+      "html": "<button class=\"ds-toggle is-on\" type=\"button\" aria-pressed=\"true\"><span>CCTV</span><span class=\"ds-flag\">On</span></button>",
+      "css": ".ds-toggle { width: 18rem; min-height: 48px; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.65rem 0.75rem; color: var(--ink); background: transparent; border: 1px solid rgba(0, 212, 255, 0.4); font-family: \"Plus Jakarta Sans\", sans-serif; font-weight: 700; text-align: left; cursor: pointer; } .ds-toggle.is-on { background: rgba(0, 212, 255, 0.1); border-color: var(--cyan); box-shadow: inset 0 0 0 1px var(--cyan), 0 10px 18px rgba(0, 0, 0, 0.28); } .ds-flag { padding: 0.05rem 0.4rem; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); border: 1px solid rgba(0, 212, 255, 0.45); } .ds-toggle.is-on .ds-flag { color: #041018; background: var(--cyan); border-color: var(--cyan); } .ds-toggle:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Night-Shift Viewfinder",
+    "overview": "The Night-Shift Viewfinder is a near-black instrument for a Nilai workshop. The ground is void, the working light is electric cyan, and violet exists only as bloom. Density is one reading column on a 65ch measure, opening to a two-column viewfinder on a wide screen. Plus Jakarta Sans carries every line, from quiet body copy to the heavy uppercase display.\n\nDepth is glass, cyan edge light, and a soft lift. Corner brackets frame the first screen and repeat on the builder plate. The 56px grid and the scan lines stay inside that viewfinder. The camera and the system diagram are CSS and SVG. The map iframe is the only embedded picture, filtered back into the night palette.\n\nThe page keeps a dark color scheme and rejects a light cream section, a graphite-and-amber theme, and a smart-home pastel palette. Brand blue stays in the logo mark. Brand red is the Sunday closed badge, and the form also uses that red as the alert wash.",
+    "keyCharacteristics": [
+      "Void ground, cyan working light, violet bloom in two places",
+      "Plus Jakarta Sans, 400 body through 800 display",
+      "Square HUD keys and circular instrument marks",
+      "Glass on the builder, the reviews, and the quote form",
+      "Grid and scan lines confined to the hero viewfinder",
+      "Lens sweep, tilt, and diagram settle, all stopped for reduced motion"
+    ],
+    "rules": [
+      {
+        "name": "The Working Light Rule",
+        "body": "Electric cyan is the only interactive accent. Every filled cyan control uses on-cyan text. Selection uses the same pair.",
+        "section": "colors"
+      },
+      {
+        "name": "The Bloom Rule",
+        "body": "Violet is bloom behind the camera and a wash on the system-builder plate. It is not a second accent for type or controls.",
+        "section": "colors"
+      },
+      {
+        "name": "The Mark Rule",
+        "body": "Brand blue belongs to the logo mark. Brand red fills the Sunday closed badge with white text, and the same red at 35% opacity is the form-alert wash. Red is not a button, a link, or a section.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Face Rule",
+        "body": "Plus Jakarta Sans is the only family. Display and controls are 800. Body is 400. Navigation and form labels are 700. The hero lede is 600. No second family, no italic.",
+        "section": "typography"
+      },
+      {
+        "name": "The Measure Rule",
+        "body": "Support copy stays inside 65ch. Display is uppercase and tight. Instrument labels are uppercase and tracked out.",
+        "section": "typography"
+      },
+      {
+        "name": "The Viewfinder Rule",
+        "body": "The 56px grid and the camera scan lines belong to the hero viewfinder. The rest of the page is the 1120px column and the breakpoints above, on void or on the night band.",
+        "section": "layout"
+      },
+      {
+        "name": "The Plate Rule",
+        "body": "Glass is the system builder, the reviews, and the quote form. Other sections sit flat on void or on the night band. The stuck header and the dock are scrims.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Soft Lift Rule",
+        "body": "A shadow is a soft black lift, a cyan glow, or a 1px inset sheen. The system has no hard offset shadow.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Square Key Rule",
+        "body": "Buttons and fields are 2px. HUD keys, plates, the menu toggle, and the dock are square. Circles belong to the lens, the blooms, the pips, and the timeline dots.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do keep the ground on void, with the night band as the only alternate section ground.",
+      "Do put on-cyan text on every filled cyan control, including the primary button, the pressed HUD key, and the dock's Call cell.",
+      "Do use Plus Jakarta Sans at the shipped weights: 400 for body, 600 for the hero lede, 700 for navigation and labels, 800 for display and controls.",
+      "Do keep the 16px by 2px cyan corner brackets on the viewfinder and on the builder plate.",
+      "Do draw the camera and the system diagram in CSS and SVG, and keep partner names as text.",
+      "Do stop animation and transitions, and hide the lens sweep, when reduced motion is requested. The camera's resting tilt may stay.",
+      "Do keep the focus ring: 2px solid instrument ink, 3px offset."
+    ],
+    "donts": [
+      "Don't add a light cream section, a graphite-and-amber theme, or a pastel smart-home palette.",
+      "Don't use brand blue outside the logo mark.",
+      "Don't use brand red as a theme. The shipped uses are the filled Sunday badge and the form-alert wash.",
+      "Don't place violet on type, buttons, or sections beyond the camera bloom and the builder plate.",
+      "Don't extend the viewfinder grid or the scan lines past the hero.",
+      "Don't make the glass plate the default section container.",
+      "Don't replace the CSS camera, the line schematic, or the text partner names with photography or redrawn partner logos."
+    ]
+  }
+}
