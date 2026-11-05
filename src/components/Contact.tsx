@@ -100,7 +100,7 @@ export function Contact() {
                 <Clock className="size-4 text-amber" />
                 Hours
               </h3>
-              <p className={`rounded-full px-2.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.12em] ${status.open ? "bg-ink text-white" : "bg-white text-ink"}`}>
+              <p className={`rounded-full px-2.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.12em] ${status.open ? "bg-amber text-inktext" : "bg-ink text-ivory"}`}>
                 {status.label}
               </p>
             </div>

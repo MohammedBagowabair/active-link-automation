@@ -1,55 +1,28 @@
-import { useRef, useState } from "react"
 import { reviews } from "@/lib/site"
 
 export function Reviews() {
-  const [index, setIndex] = useState(0)
-  const startX = useRef<number | null>(null)
-  const review = reviews[index] ?? reviews[0]
-
-  function go(next: number) {
-    setIndex((next + reviews.length) % reviews.length)
-  }
-
   return (
-    <section id="reviews" className="mx-auto max-w-5xl px-5 py-14 md:px-8 md:py-20" aria-labelledby="reviews-title">
-      <h2 id="reviews-title" className="text-3xl font-semibold tracking-tight md:text-4xl">
-        5.0 from 1,070+ reviews.
-      </h2>
-      <p className="mt-2 text-sm text-mist">Google review excerpts. No names.</p>
-      <figure
-        className="mt-6 min-h-48"
-        aria-roledescription="carousel"
-        aria-label={`Review ${index + 1} of ${reviews.length}`}
-        onPointerDown={(event) => {
-          startX.current = event.clientX
-        }}
-        onPointerUp={(event) => {
-          if (startX.current == null) return
-          const dx = event.clientX - startX.current
-          if (dx > 40) go(index - 1)
-          if (dx < -40) go(index + 1)
-          startX.current = null
-        }}
-      >
-        <blockquote className="max-w-2xl text-xl font-medium leading-snug tracking-tight md:text-2xl">
-          “{review.quote}”
-        </blockquote>
-        <figcaption className="mt-4 text-xs text-mist">
-          Google review · {index + 1} / {reviews.length}
-        </figcaption>
-      </figure>
-      <div className="mt-4 flex gap-2" role="tablist" aria-label="Review progress">
-        {reviews.map((item, dot) => (
-          <button
-            key={item.id}
-            type="button"
-            role="tab"
-            aria-selected={dot === index}
-            aria-label={`Show review ${dot + 1}`}
-            className={`h-1.5 rounded-full transition-all ${dot === index ? "w-8 bg-ink" : "w-2 bg-line"}`}
-            onClick={() => go(dot)}
-          />
-        ))}
+    <section id="reviews" className="bg-cream pt-12 text-inktext md:px-8 md:py-20" aria-labelledby="reviews-title">
+      <div className="mx-auto max-w-6xl px-4 md:px-0">
+        <p className="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-amber-deep">Google reviews</p>
+        <h2 id="reviews-title" className="mt-2 font-display text-3xl font-bold tracking-tight md:text-5xl">
+          5.0 from 1,070+ reviews.
+        </h2>
+        <p className="mt-2 text-sm text-inktext/70">Excerpts. No names added. Swipe to read the next one.</p>
+      </div>
+      <div className="mt-4">
+        <div className="rail" aria-label="Google reviews" aria-roledescription="carousel">
+          {reviews.map((review, index) => (
+            <figure key={review.id} className="rounded-[1.5rem] bg-white/70 p-5">
+              <blockquote className="font-display text-xl font-semibold leading-snug md:text-2xl">
+                “{review.quote}”
+              </blockquote>
+              <figcaption className="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-inktext/55">
+                Google review · {index + 1} / {reviews.length}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
       </div>
     </section>
   )

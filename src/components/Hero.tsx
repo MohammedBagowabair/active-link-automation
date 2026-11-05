@@ -1,100 +1,77 @@
-import { useEffect, useRef, useState } from "react"
 import { CountUp } from "@/components/CountUp"
 import { useQuote } from "@/components/QuoteContext"
 import { asset } from "@/lib/site"
 
-function reduced() {
-  return window.matchMedia("(prefers-reduced-motion: reduce)").matches
-}
-
 export function Hero() {
   const { openQuote } = useQuote()
-  const frame = useRef<HTMLDivElement>(null)
-  const [pos, setPos] = useState({ x: 0.62, y: 0.42 })
-
-  function place(clientX: number, clientY: number) {
-    const el = frame.current
-    if (!el || reduced()) return
-    const rect = el.getBoundingClientRect()
-    const x = Math.min(1, Math.max(0, (clientX - rect.left) / rect.width))
-    const y = Math.min(1, Math.max(0, (clientY - rect.top) / rect.height))
-    setPos({ x, y })
-  }
-
-  useEffect(() => {
-    const onTilt = (event: DeviceOrientationEvent) => {
-      if (reduced()) return
-      const x = Math.min(1, Math.max(0, 0.5 + (event.gamma ?? 0) / 50))
-      const y = Math.min(1, Math.max(0, 0.45 + ((event.beta ?? 40) - 40) / 70))
-      setPos({ x, y })
-    }
-    window.addEventListener("deviceorientation", onTilt)
-    return () => window.removeEventListener("deviceorientation", onTilt)
-  }, [])
-
-  const shift = reduced() ? "none" : `translate(${(0.5 - pos.x) * 8}%, ${(0.5 - pos.y) * 8}%) scale(1.08)`
-
   return (
-    <section className="mx-auto grid max-w-5xl gap-8 px-5 pt-8 pb-4 md:grid-cols-2 md:items-end md:px-8 md:pt-16 md:pb-10" aria-labelledby="hero-title">
-      <div>
-        <p className="text-xs font-medium tracking-wide text-mist">Nilai · Established 2014</p>
-        <h1 id="hero-title" className="hero-title mt-4">
-          Security.
-          <br />
-          Automation.
-          <br />
-          Electrical.
+    <section className="hero-screen" aria-labelledby="hero-title">
+      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+        <img
+          src={asset("images/hero.jpg")}
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover opacity-35 lg:hidden"
+        />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(240,180,41,0.28),transparent_46%),linear-gradient(to_top,#07090d_8%,rgba(7,9,13,0.2)_42%,#07090d_100%)] lg:bg-[radial-gradient(ellipse_at_top_left,rgba(240,180,41,0.18),transparent_42%)]" />
+        <div className="hero-grid" />
+        <div className="hero-sweep" />
+        <div className="hero-scan lg:hidden" />
+      </div>
+
+      <div className="relative z-10 flex w-full min-w-0 flex-1 flex-col justify-end">
+        <p className="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-amber">
+          Bandar Baru Nilai · Est. 2014
+        </p>
+        <h1 id="hero-title" className="hero-title mt-3 text-ivory">
+          <span className="block">Security.</span>
+          <span className="block">Automation.</span>
+          <span className="block text-amber">Electrical.</span>
         </h1>
-        <p className="mt-4 max-w-sm text-base text-mist">One team. Complete solutions.</p>
+        <p className="mt-4 max-w-md font-display text-xl font-semibold tracking-tight md:text-2xl">
+          One team. Complete solutions.
+        </p>
+        <p className="mt-2 max-w-md text-sm leading-relaxed text-ivory/80 md:text-base">
+          CCTV, alarms, access, gates and electrical work for Nilai, Seremban, Negeri Sembilan, Selangor and
+          surrounding areas.
+        </p>
         <button
           type="button"
-          className="press mt-6 hidden h-12 rounded-full bg-ink px-6 text-sm font-semibold text-white md:inline-flex"
+          className="press mt-5 h-12 rounded-full bg-amber px-5 text-sm font-bold text-inktext md:hidden"
           onClick={() => openQuote()}
-          onPointerMove={(event) => {
-            if (reduced()) return
-            const rect = event.currentTarget.getBoundingClientRect()
-            const x = event.clientX - (rect.left + rect.width / 2)
-            const y = event.clientY - (rect.top + rect.height / 2)
-            event.currentTarget.style.transform = `translate(${x * 0.18}px, ${y * 0.25}px)`
-          }}
-          onPointerLeave={(event) => {
-            event.currentTarget.style.transform = ""
-          }}
         >
           Start a quote
         </button>
-        <p className="mt-8 text-sm text-mist">
-          <span className="font-semibold text-ink">
-            <CountUp to={5} decimals={1} />
-          </span>{" "}
-          Google
-          <span className="mx-2 text-line">/</span>
-          <span className="font-semibold text-ink">
-            <CountUp to={1070} suffix="+" />
-          </span>{" "}
-          reviews
-          <span className="mx-2 text-line">/</span>
-          Since{" "}
-          <span className="font-semibold text-ink">
-            <CountUp to={2014} from={2000} grouping={false} />
-          </span>
-        </p>
+        <dl className="mt-5 grid grid-cols-3 gap-2">
+          <div className="glass rounded-2xl px-2 py-3 text-center">
+            <dd className="font-display text-2xl font-bold md:text-4xl">
+              <CountUp to={5} decimals={1} />
+            </dd>
+            <dt className="mt-1 text-[0.62rem] uppercase tracking-[0.14em] text-mist">Google</dt>
+          </div>
+          <div className="glass rounded-2xl px-2 py-3 text-center">
+            <dd className="font-display text-2xl font-bold md:text-4xl">
+              <CountUp to={1070} suffix="+" />
+            </dd>
+            <dt className="mt-1 text-[0.62rem] uppercase tracking-[0.14em] text-mist">Reviews</dt>
+          </div>
+          <div className="glass rounded-2xl px-2 py-3 text-center">
+            <dd className="font-display text-2xl font-bold md:text-4xl">
+              <CountUp to={2014} from={2000} grouping={false} />
+            </dd>
+            <dt className="mt-1 text-[0.62rem] uppercase tracking-[0.14em] text-mist">Since</dt>
+          </div>
+        </dl>
       </div>
 
-      <div
-        ref={frame}
-        className="viewfinder"
-        onPointerMove={(event) => place(event.clientX, event.clientY)}
-        onPointerDown={(event) => place(event.clientX, event.clientY)}
-        role="img"
-        aria-label="CCTV viewfinder. Move a finger or cursor to aim the crosshair."
-      >
-        <img src={asset("images/hero.jpg")} alt="" style={{ transform: shift }} />
-        <div className="reticle" style={{ left: `${pos.x * 100}%`, top: `${pos.y * 100}%` }} />
-        <p className="rec">
-          <span className="rec-dot" />
-          REC
-        </p>
+      <div className="relative z-10 mt-6 hidden overflow-hidden rounded-[1.6rem] border border-line lg:block">
+        <img
+          src={asset("images/hero.jpg")}
+          alt="Rows of CCTV cameras mounted across an exterior wall"
+          width={2000}
+          height={1345}
+          fetchPriority="high"
+          className="aspect-[4/5] w-full object-cover"
+        />
       </div>
     </section>
   )
