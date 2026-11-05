@@ -1,19 +1,20 @@
 import { useEffect, useState } from "react"
 import { Logo } from "@/components/Logo"
 import { useQuote } from "@/components/QuoteContext"
-import { Button } from "@/components/ui/button"
 import { getBusinessStatus, PHONE_E164, whatsappHref } from "@/lib/site"
 import { cn } from "@/lib/utils"
-import { Phone } from "lucide-react"
-import { WhatsAppIcon } from "@/components/Icons"
 
 const links = [
+  { href: "#selector", id: "selector", label: "Build" },
   { href: "#services", id: "services", label: "Services" },
   { href: "#repair", id: "repair", label: "Repair" },
-  { href: "#industries", id: "industries", label: "Who" },
   { href: "#reviews", id: "reviews", label: "Reviews" },
   { href: "#contact", id: "contact", label: "Visit" },
 ]
+
+function reduced() {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches
+}
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -39,61 +40,55 @@ export function Header() {
           .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0]
         if (visible?.target.id) setCurrent(visible.target.id)
       },
-      { rootMargin: "-45% 0px -45% 0px", threshold: [0.1, 0.4] },
+      { rootMargin: "-40% 0px -50% 0px", threshold: [0.15, 0.4] },
     )
     sections.forEach((section) => observer.observe(section))
     return () => observer.disconnect()
   }, [])
 
   return (
-    <header
-      className={cn(
-        "sticky top-0 z-30 border-b transition-colors",
-        scrolled ? "border-line bg-ink" : "border-transparent bg-ink/85",
-      )}
-    >
-      <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-3 px-4 md:h-[4.5rem] md:px-8">
-        <a href="#top" className="rounded-xl" aria-label="Active Link Automation & Electrical, home">
+    <header className={cn("sticky top-0 z-30 border-b", scrolled ? "border-line bg-white" : "border-transparent bg-paper")}>
+      <div className="mx-auto flex h-14 max-w-5xl items-center justify-between gap-3 px-5 md:h-16 md:px-8">
+        <a href="#top" aria-label="Active Link Automation & Electrical, home">
           <Logo compact />
         </a>
-        <p
-          className={`rounded-full px-2.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.14em] md:hidden ${
-            status.open ? "bg-amber text-inktext" : "bg-panel text-mist"
-          }`}
-        >
-          {status.label}
-        </p>
-        <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
+        <p className="text-xs text-mist md:hidden">{status.label}</p>
+        <nav className="hidden items-center gap-5 lg:flex" aria-label="Primary">
           {links.map((link) => (
             <a
               key={link.id}
               href={link.href}
               aria-current={current === link.id ? "location" : undefined}
-              className={cn(
-                "rounded-full px-3 py-2 text-sm text-mist hover:text-ivory",
-                current === link.id && "text-amber",
-              )}
+              className={cn("text-sm text-mist hover:text-ink", current === link.id && "text-ink")}
             >
               {link.label}
             </a>
           ))}
         </nav>
         <div className="hidden items-center gap-2 md:flex">
-          <Button variant="outline" size="sm" asChild>
-            <a href={`tel:${PHONE_E164}`}>
-              <Phone />
-              Call
-            </a>
-          </Button>
-          <Button size="sm" variant="outline" asChild>
-            <a href={whatsappHref()}>
-              <WhatsAppIcon className="size-4" />
-              WhatsApp
-            </a>
-          </Button>
-          <Button size="sm" onClick={() => openQuote()}>
+          <a href={`tel:${PHONE_E164}`} className="rounded-full px-3 py-2 text-sm">
+            Call
+          </a>
+          <a href={whatsappHref()} className="rounded-full px-3 py-2 text-sm">
+            WhatsApp
+          </a>
+          <button
+            type="button"
+            className="press h-10 rounded-full bg-ink px-4 text-sm font-semibold text-white"
+            onClick={() => openQuote()}
+            onPointerMove={(event) => {
+              if (reduced()) return
+              const rect = event.currentTarget.getBoundingClientRect()
+              const x = event.clientX - (rect.left + rect.width / 2)
+              const y = event.clientY - (rect.top + rect.height / 2)
+              event.currentTarget.style.transform = `translate(${x * 0.2}px, ${y * 0.3}px)`
+            }}
+            onPointerLeave={(event) => {
+              event.currentTarget.style.transform = ""
+            }}
+          >
             Quote
-          </Button>
+          </button>
         </div>
       </div>
     </header>
