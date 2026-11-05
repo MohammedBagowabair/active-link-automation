@@ -16,6 +16,7 @@ import { Repair } from "@/components/Repair"
 import { Reviews } from "@/components/Reviews"
 import { Selector } from "@/components/Selector"
 import { Services } from "@/components/Services"
+import { Why } from "@/components/Why"
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
         <main id="main">
           <Hero />
           <Marquee />
+          <Why />
           <Services />
           <Selector />
           <Repair />

@@ -1,11 +1,6 @@
-import { useState } from "react"
 import { asset, electricalTasks } from "@/lib/site"
 
 export function Electrical() {
-  const [open, setOpen] = useState(false)
-  const preview = electricalTasks.slice(0, 4)
-  const shown = open ? electricalTasks : preview
-
   return (
     <section id="electrical" className="px-4 pt-12 md:px-8 md:pt-20" aria-labelledby="electrical-title">
       <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-2 lg:items-center">
@@ -18,20 +13,12 @@ export function Electrical() {
             Electrical services from the same Nilai team that handles the security and automation.
           </p>
           <ul className="mt-4 flex flex-wrap gap-2">
-            {shown.map((task) => (
+            {electricalTasks.map((task) => (
               <li key={task} className="rounded-full border border-line bg-panel px-3 py-1.5 text-sm">
                 {task}
               </li>
             ))}
           </ul>
-          <button
-            type="button"
-            className="mt-3 text-sm font-semibold text-amber"
-            aria-expanded={open}
-            onClick={() => setOpen((value) => !value)}
-          >
-            {open ? "Show fewer" : `Show all ${electricalTasks.length}`}
-          </button>
         </div>
         <img
           src={asset("images/wires.jpg")}

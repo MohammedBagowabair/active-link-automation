@@ -112,6 +112,7 @@ export function Contact() {
                 </div>
               ))}
             </dl>
+            <h3 className="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-mist">Payments</h3>
             <ul className="mt-3 flex flex-wrap gap-2">
               {payments.map((method) => (
                 <li key={method} className="rounded-full border border-line px-3 py-1 text-xs">

@@ -26,6 +26,8 @@ export const PHONE_E164 = "+60166660106"
 export const WHATSAPP_NUMBER = "60166660106"
 export const EMAIL = "activelink0724@gmail.com"
 export const FACEBOOK = "https://www.facebook.com/activelinkautomation"
+export const GOOGLE_REVIEWS_LINK =
+  "https://www.google.com/maps/search/?api=1&query=Active+Link+Automation+%26+Electrical+Nilai"
 export const INSTAGRAM = "https://www.instagram.com/activelinkautomation"
 export const MAPS_LINK =
   "https://www.google.com/maps/search/?api=1&query=2.814138,101.796191"

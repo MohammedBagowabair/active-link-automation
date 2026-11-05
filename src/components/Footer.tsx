@@ -4,6 +4,7 @@ import {
   ADDRESS_ONE_LINE,
   EMAIL,
   FACEBOOK,
+  GOOGLE_REVIEWS_LINK,
   hours,
   INSTAGRAM,
   PHONE_DISPLAY,
@@ -12,13 +13,16 @@ import {
 } from "@/lib/site"
 
 const explore = [
+  ["Why us", "#why"],
   ["Services", "#services"],
-  ["System selector", "#selector"],
+  ["Build a system", "#selector"],
   ["CCTV repair", "#repair"],
   ["Electrical", "#electrical"],
   ["Who we serve", "#industries"],
   ["Process", "#process"],
+  ["Partners", "#partners"],
   ["Reviews", "#reviews"],
+  ["Service areas", "#areas"],
   ["FAQ", "#faq"],
   ["Contact", "#contact"],
 ] as const
@@ -58,6 +62,11 @@ export function Footer() {
             <li>
               <a className="hover:text-amber" href={whatsappHref()}>
                 WhatsApp
+              </a>
+            </li>
+            <li>
+              <a className="hover:text-amber" href={GOOGLE_REVIEWS_LINK}>
+                Google reviews
               </a>
             </li>
             <li>

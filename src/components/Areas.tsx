@@ -17,14 +17,7 @@ export function Areas() {
           Open the Nilai premises
         </a>
       </div>
-      <div className="rail-fade mt-4 md:hidden">
-        <ol className="rail">
-          {areas.map((area, index) => (
-            <AreaCard key={area.name} index={index} name={area.name} note={area.note} />
-          ))}
-        </ol>
-      </div>
-      <ol className="mx-auto mt-6 hidden max-w-6xl gap-3 md:grid md:grid-cols-3 lg:grid-cols-5">
+      <ol className="mx-auto mt-6 grid max-w-6xl gap-3 px-4 sm:grid-cols-2 lg:grid-cols-5 lg:px-0">
         {areas.map((area, index) => (
           <AreaCard key={area.name} index={index} name={area.name} note={area.note} />
         ))}

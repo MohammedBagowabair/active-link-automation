@@ -12,14 +12,7 @@ export function Partners() {
           Hikvision HikTech Star Winner, Dahua KIP Partner, CynicsXtra and Tiandy Master Dealer.
         </p>
       </div>
-      <div className="rail-fade mt-4 lg:hidden">
-        <ul className="rail">
-          {partners.map((partner) => (
-            <PartnerCard key={partner.name} name={partner.name} detail={partner.detail} />
-          ))}
-        </ul>
-      </div>
-      <ul className="mx-auto mt-6 hidden max-w-6xl gap-3 lg:grid lg:grid-cols-4">
+      <ul className="mx-auto mt-6 grid max-w-6xl gap-3 px-4 sm:grid-cols-2 lg:grid-cols-4 lg:px-0">
         {partners.map((partner) => (
           <PartnerCard key={partner.name} name={partner.name} detail={partner.detail} />
         ))}

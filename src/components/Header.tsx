@@ -8,10 +8,17 @@ import { Phone } from "lucide-react"
 import { WhatsAppIcon } from "@/components/Icons"
 
 const links = [
+  { href: "#why", id: "why", label: "Why us" },
   { href: "#services", id: "services", label: "Services" },
+  { href: "#selector", id: "selector", label: "Build" },
   { href: "#repair", id: "repair", label: "Repair" },
+  { href: "#electrical", id: "electrical", label: "Electrical" },
   { href: "#industries", id: "industries", label: "Who" },
+  { href: "#process", id: "process", label: "Process" },
+  { href: "#partners", id: "partners", label: "Partners" },
   { href: "#reviews", id: "reviews", label: "Reviews" },
+  { href: "#areas", id: "areas", label: "Areas" },
+  { href: "#faq", id: "faq", label: "FAQ" },
   { href: "#contact", id: "contact", label: "Visit" },
 ]
 
@@ -63,21 +70,6 @@ export function Header() {
         >
           {status.label}
         </p>
-        <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
-          {links.map((link) => (
-            <a
-              key={link.id}
-              href={link.href}
-              aria-current={current === link.id ? "location" : undefined}
-              className={cn(
-                "rounded-full px-3 py-2 text-sm text-mist hover:text-ivory",
-                current === link.id && "text-amber",
-              )}
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
         <div className="hidden items-center gap-2 md:flex">
           <Button variant="outline" size="sm" asChild>
             <a href={`tel:${PHONE_E164}`}>
@@ -96,6 +88,23 @@ export function Header() {
           </Button>
         </div>
       </div>
+      <nav className="border-t border-line/70" aria-label="Sections">
+        <div className="mx-auto flex max-w-6xl gap-1.5 overflow-x-auto px-4 py-2 md:flex-wrap md:px-8">
+          {links.map((link) => (
+            <a
+              key={link.id}
+              href={link.href}
+              aria-current={current === link.id ? "location" : undefined}
+              className={cn(
+                "shrink-0 rounded-full px-3 py-1.5 text-xs font-semibold text-mist hover:text-ivory",
+                current === link.id && "bg-amber text-inktext",
+              )}
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </nav>
     </header>
   )
 }

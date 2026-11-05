@@ -9,14 +9,7 @@ export function Industries() {
           Homes, shops, factories, and remote sites.
         </h2>
       </div>
-      <div className="rail-fade mt-4 md:hidden">
-        <div className="rail" aria-label="Industries">
-          {industries.map((industry) => (
-            <IndustryCard key={industry.title} industry={industry} />
-          ))}
-        </div>
-      </div>
-      <div className="mx-auto mt-6 hidden max-w-6xl gap-3 md:grid md:grid-cols-2">
+      <div className="mx-auto mt-6 grid max-w-6xl gap-3 px-4 md:grid-cols-2 md:px-0">
         {industries.map((industry) => (
           <IndustryCard key={industry.title} industry={industry} />
         ))}
