@@ -2,7 +2,7 @@ import { ArrowUpRight, Phone, Star } from "lucide-react"
 import { CountUp } from "@/components/CountUp"
 import { WhatsAppIcon } from "@/components/Icons"
 import { Button } from "@/components/ui/button"
-import { PHONE_DISPLAY, PHONE_E164, whatsappHref } from "@/lib/site"
+import { asset, PHONE_DISPLAY, PHONE_E164, whatsappHref } from "@/lib/site"
 
 export function Hero() {
   return (
@@ -50,7 +50,7 @@ export function Hero() {
         <div className="rise relative" style={{ animationDelay: "180ms" }}>
           <div className="overflow-hidden rounded-[1.8rem] border border-line shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
             <img
-              src="/images/hero.jpg"
+              src={asset("images/hero.jpg")}
               alt="Rows of CCTV cameras mounted across an exterior wall"
               width={2000}
               height={1345}

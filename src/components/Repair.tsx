@@ -1,5 +1,5 @@
 import { Reveal } from "@/components/Reveal"
-import { repairIssues, whatsappHref } from "@/lib/site"
+import { asset, repairIssues, whatsappHref } from "@/lib/site"
 
 export function Repair() {
   return (
@@ -8,7 +8,7 @@ export function Repair() {
         <Reveal className="order-2 lg:order-1">
           <div className="overflow-hidden rounded-[1.8rem] border border-line">
             <img
-              src="/images/hero.jpg"
+              src={asset("images/hero.jpg")}
               alt="A wall of outdoor CCTV cameras"
               width={2000}
               height={1345}

@@ -24,6 +24,12 @@ npm run preview
 
 ## Deploy
 
+**GitHub Pages** (project site)
+
+The production build uses base `/active-link-automation/`, so assets resolve at [https://mohammedbagowabair.github.io/active-link-automation/](https://mohammedbagowabair.github.io/active-link-automation/). Local `npm run dev` stays at `/`. `npm run build` also writes `dist/404.html` (a copy of the page) and ships `public/.nojekyll`.
+
+Pushing `main` runs `.github/workflows/deploy.yml`, which builds with npm and deploys `dist/` with the official Pages actions. In the repo, set Settings → Pages → Build and deployment → Source to **GitHub Actions**.
+
 **Netlify**
 
 - Build command: `npm run build`

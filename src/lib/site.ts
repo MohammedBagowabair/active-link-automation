@@ -11,6 +11,16 @@ import {
   type LucideIcon,
 } from "lucide-react"
 
+export const SITE_ORIGIN = "https://mohammedbagowabair.github.io"
+export const SITE_PATH = "/active-link-automation/"
+export const SITE_URL = `${SITE_ORIGIN}${SITE_PATH}`
+
+/** Public file URL that respects the GitHub Pages project base. */
+export function asset(path: string) {
+  const base = import.meta.env.BASE_URL
+  return `${base}${path.replace(/^\//, "")}`
+}
+
 export const PHONE_DISPLAY = "+60 16-666 0106"
 export const PHONE_E164 = "+60166660106"
 export const WHATSAPP_NUMBER = "60166660106"
@@ -65,7 +75,7 @@ export const services: Service[] = [
     category: "Security",
     summary: "From a single home to large commercial and industrial sites.",
     icon: Cctv,
-    image: "/images/hero.jpg",
+    image: asset("images/hero.jpg"),
     imageAlt: "Rows of CCTV cameras mounted across an exterior wall",
     width: 2000,
     height: 1345,
@@ -83,7 +93,7 @@ export const services: Service[] = [
     category: "Security",
     summary: "Control who enters a home, shop, office, factory or private compound.",
     icon: KeyRound,
-    image: "/images/camera.jpg",
+    image: asset("images/camera.jpg"),
     imageAlt: "A door fitted with a smart lock beside a phone running a lock app",
     width: 1600,
     height: 1067,
@@ -101,7 +111,7 @@ export const services: Service[] = [
     category: "Automation",
     summary: "Autogate systems for homes and private entrances.",
     icon: DoorOpen,
-    image: "/images/gate.jpg",
+    image: asset("images/gate.jpg"),
     imageAlt: "A contemporary private home with a courtyard and pool",
     width: 1600,
     height: 1061,
@@ -113,7 +123,7 @@ export const services: Service[] = [
     summary:
       "For factories, commercial buildings, car parks, private compounds and controlled entrances.",
     icon: SquareParking,
-    image: "/images/parking.jpg",
+    image: asset("images/parking.jpg"),
     imageAlt: "Aerial view of a marked outdoor car park",
     width: 1400,
     height: 933,
@@ -124,7 +134,7 @@ export const services: Service[] = [
     category: "Automation",
     summary: "Equipment selected for the property, then installed, configured and tested.",
     icon: Workflow,
-    image: "/images/circuit.jpg",
+    image: asset("images/circuit.jpg"),
     imageAlt: "Close-up of a circuit board",
     width: 1400,
     height: 933,
@@ -135,7 +145,7 @@ export const services: Service[] = [
     category: "Electrical",
     summary: "Wiring, panels, lighting, sockets, fans, earthing and power-fault work.",
     icon: Zap,
-    image: "/images/wires.jpg",
+    image: asset("images/wires.jpg"),
     imageAlt: "An electrician working on a wall-mounted electrical enclosure",
     width: 1600,
     height: 1068,
@@ -185,7 +195,7 @@ export const industries = [
     title: "Residential",
     who: "Homeowners",
     text: "Houses and private compounds that need cameras, alarms, gates, access or electrical work.",
-    image: "/images/home.jpg",
+    image: asset("images/home.jpg"),
     alt: "Modern house at dusk with the interior lights on",
     width: 1400,
     height: 933,
@@ -194,7 +204,7 @@ export const industries = [
     title: "Commercial",
     who: "Shops, offices, pharmacies, cafés, restaurants",
     text: "Premises that need CCTV, alarms, access, attendance and day-to-day electrical work.",
-    image: "/images/cafe.jpg",
+    image: asset("images/cafe.jpg"),
     alt: "Interior of a café with a service counter and seating",
     width: 1400,
     height: 960,
@@ -203,7 +213,7 @@ export const industries = [
     title: "Industrial",
     who: "Factories and warehouses",
     text: "Larger sites, including barrier gates and controlled entrances.",
-    image: "/images/warehouse.jpg",
+    image: asset("images/warehouse.jpg"),
     alt: "Warehouse aisles with racking and stacked cartons",
     width: 1400,
     height: 933,
@@ -212,7 +222,7 @@ export const industries = [
     title: "Agricultural & remote",
     who: "Farms and large areas",
     text: "Sites with limited infrastructure, or with no internet at all.",
-    image: "/images/farm.jpg",
+    image: asset("images/farm.jpg"),
     alt: "Open farmland in low golden light",
     width: 1400,
     height: 788,

@@ -1,6 +1,6 @@
 import { Check } from "lucide-react"
 import { Reveal } from "@/components/Reveal"
-import { electricalTasks } from "@/lib/site"
+import { asset, electricalTasks } from "@/lib/site"
 
 export function Electrical() {
   return (
@@ -28,7 +28,7 @@ export function Electrical() {
         <Reveal delay={80}>
           <figure className="overflow-hidden rounded-[1.8rem] border border-line">
             <img
-              src="/images/wires.jpg"
+              src={asset("images/wires.jpg")}
               alt="An electrician working on a wall-mounted electrical enclosure"
               width={1600}
               height={1068}
