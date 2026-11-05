@@ -1,46 +1,45 @@
-import { Check } from "lucide-react"
-import { Reveal } from "@/components/Reveal"
+import { useState } from "react"
 import { asset, electricalTasks } from "@/lib/site"
 
 export function Electrical() {
+  const [open, setOpen] = useState(false)
+  const preview = electricalTasks.slice(0, 4)
+  const shown = open ? electricalTasks : preview
+
   return (
-    <section id="electrical" className="border-y border-line bg-ink-2" aria-labelledby="electrical-title">
-      <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-20 md:px-8 md:py-28 lg:grid-cols-2 lg:gap-16">
-        <Reveal>
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-amber">04 — Electrical</p>
-          <h2 id="electrical-title" className="mt-3 font-display text-4xl font-bold tracking-tight text-ivory md:text-5xl">
+    <section id="electrical" className="px-4 pt-12 md:px-8 md:pt-20" aria-labelledby="electrical-title">
+      <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-2 lg:items-center">
+        <div>
+          <p className="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-amber">Electrical</p>
+          <h2 id="electrical-title" className="mt-2 font-display text-3xl font-bold tracking-tight md:text-5xl">
             Power, panels and the faults in between.
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-mist md:text-lg">
+          <p className="mt-3 text-sm leading-relaxed text-mist md:text-base">
             Electrical services from the same Nilai team that handles the security and automation.
           </p>
-          <ul className="mt-8 grid gap-3 sm:grid-cols-2">
-            {electricalTasks.map((task) => (
-              <li key={task} className="flex items-start gap-3 text-sm leading-snug text-ivory md:text-base">
-                <span className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-amber text-inktext">
-                  <Check className="size-3.5" strokeWidth={3} />
-                </span>
+          <ul className="mt-4 flex flex-wrap gap-2">
+            {shown.map((task) => (
+              <li key={task} className="rounded-full border border-line bg-panel px-3 py-1.5 text-sm">
                 {task}
               </li>
             ))}
           </ul>
-        </Reveal>
-        <Reveal delay={80}>
-          <figure className="overflow-hidden rounded-[1.8rem] border border-line">
-            <img
-              src={asset("images/wires.jpg")}
-              alt="An electrician working on a wall-mounted electrical enclosure"
-              width={1600}
-              height={1068}
-              loading="lazy"
-              decoding="async"
-              className="aspect-[4/3] w-full object-cover object-[70%_center]"
-            />
-            <figcaption className="bg-panel px-5 py-4 text-sm text-mist">
-              Wiring, panels, lighting, earthing and power restoration.
-            </figcaption>
-          </figure>
-        </Reveal>
+          <button
+            type="button"
+            className="mt-3 text-sm font-semibold text-amber"
+            aria-expanded={open}
+            onClick={() => setOpen((value) => !value)}
+          >
+            {open ? "Show fewer" : `Show all ${electricalTasks.length}`}
+          </button>
+        </div>
+        <img
+          src={asset("images/wires.jpg")}
+          alt="An electrician working on a wall-mounted electrical enclosure"
+          width={1600}
+          height={1068}
+          className="h-64 w-full rounded-[1.5rem] object-cover md:h-80"
+        />
       </div>
     </section>
   )

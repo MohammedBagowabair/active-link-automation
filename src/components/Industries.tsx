@@ -1,38 +1,46 @@
-import { Reveal } from "@/components/Reveal"
 import { industries } from "@/lib/site"
 
 export function Industries() {
   return (
-    <section id="industries" className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28" aria-labelledby="industries-title">
-      <Reveal>
-        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-amber">05 — Who it is for</p>
-        <h2 id="industries-title" className="mt-3 max-w-2xl font-display text-4xl font-bold tracking-tight text-ivory md:text-5xl">
-          Homes, shops, factories, and sites with limited infrastructure.
+    <section id="industries" className="pt-12 md:px-8 md:pt-20" aria-labelledby="industries-title">
+      <div className="mx-auto max-w-6xl px-4 md:px-0">
+        <p className="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-amber">Who it is for</p>
+        <h2 id="industries-title" className="mt-2 max-w-xl font-display text-3xl font-bold tracking-tight md:text-5xl">
+          Homes, shops, factories, and remote sites.
         </h2>
-      </Reveal>
-      <div className="mt-10 grid gap-4 md:grid-cols-2">
-        {industries.map((industry, index) => (
-          <Reveal key={industry.title} delay={index * 70} className="h-full">
-            <article className="group relative h-full min-h-[22rem] overflow-hidden rounded-[1.8rem] border border-line">
-              <img
-                src={industry.image}
-                alt={industry.alt}
-                width={industry.width}
-                height={industry.height}
-                loading="lazy"
-                decoding="async"
-                className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/75 to-ink/10" />
-              <div className="relative flex h-full flex-col justify-end p-6 md:p-8">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-amber">{industry.who}</p>
-                <h3 className="mt-2 font-display text-3xl font-bold tracking-tight text-ivory">{industry.title}</h3>
-                <p className="mt-3 max-w-md text-sm leading-relaxed text-ivory/85 md:text-base">{industry.text}</p>
-              </div>
-            </article>
-          </Reveal>
+      </div>
+      <div className="rail-fade mt-4 md:hidden">
+        <div className="rail" aria-label="Industries">
+          {industries.map((industry) => (
+            <IndustryCard key={industry.title} industry={industry} />
+          ))}
+        </div>
+      </div>
+      <div className="mx-auto mt-6 hidden max-w-6xl gap-3 md:grid md:grid-cols-2">
+        {industries.map((industry) => (
+          <IndustryCard key={industry.title} industry={industry} />
         ))}
       </div>
     </section>
+  )
+}
+
+function IndustryCard({ industry }: { industry: (typeof industries)[number] }) {
+  return (
+    <article className="press relative h-80 overflow-hidden rounded-[1.5rem] border border-line">
+      <img
+        src={industry.image}
+        alt={industry.alt}
+        width={industry.width}
+        height={industry.height}
+        className="absolute inset-0 h-full w-full object-cover"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 p-5">
+        <p className="text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-amber">{industry.who}</p>
+        <h3 className="mt-1 font-display text-2xl font-bold">{industry.title}</h3>
+        <p className="mt-2 text-sm leading-relaxed text-ivory/85">{industry.text}</p>
+      </div>
+    </article>
   )
 }
