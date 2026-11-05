@@ -1,3 +1,53 @@
-# New repo
+# Active Link Automation & Electrical
 
-This repo was created by a Cursor cloud agent.
+Marketing site for **Active Link Automation & Electrical**, a security, automation and electrical business based in Bandar Baru Nilai, Negeri Sembilan.
+
+The site is a static Vite + React + TypeScript build. There is no backend, database or server code. The quote form opens WhatsApp on the visitor’s device.
+
+## Run locally
+
+```bash
+npm install
+npm run dev
+```
+
+The dev server is [http://127.0.0.1:4317](http://127.0.0.1:4317).
+
+## Production build
+
+```bash
+npm run build
+npm run preview
+```
+
+`npm run build` typechecks and writes the static site to `dist/`. Upload that folder, or point a static host at it.
+
+## Deploy
+
+**Netlify**
+
+- Build command: `npm run build`
+- Publish directory: `dist`
+
+**Vercel**
+
+- Framework preset: Vite
+- Build command: `npm run build`
+- Output directory: `dist`
+
+**Any static host**
+
+Upload the contents of `dist/` after `npm run build`. No environment variables are required. Phone, WhatsApp, email and map links are public business details baked into the page.
+
+## What is in the page
+
+- Hero, trust counters (5.0, 1,070+ reviews, established 2014)
+- Filterable services
+- “Which system do you need?” selector
+- CCTV repair, electrical services, industries, process, brand partnerships
+- Google review excerpts, service areas, FAQ
+- Quote form that composes a WhatsApp message in the browser
+- Map, hours, payments and a sticky WhatsApp button
+- LocalBusiness JSON-LD, Open Graph tags and a no-JavaScript contact fallback
+
+Photography is stored in `public/images` (Unsplash) so the built site does not depend on an image CDN.
