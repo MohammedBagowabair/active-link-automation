@@ -1,26 +1,34 @@
-import { Reveal } from "@/components/Reveal"
 import { processSteps } from "@/lib/site"
 
 export function Process() {
   return (
-    <section id="process" className="border-t border-line bg-ink" aria-labelledby="process-title">
-      <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
-        <Reveal>
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-amber">06 — How a job runs</p>
-          <h2 id="process-title" className="mt-3 max-w-2xl font-display text-4xl font-bold tracking-tight text-ivory md:text-5xl">
-            Five steps. No skipping the one that matters.
-          </h2>
-        </Reveal>
-        <ol className="process mt-12">
+    <section id="process" className="pt-12 md:px-8 md:pt-20" aria-labelledby="process-title">
+      <div className="mx-auto max-w-6xl px-4 md:px-0">
+        <p className="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-amber">How a job runs</p>
+        <h2 id="process-title" className="mt-2 font-display text-3xl font-bold tracking-tight md:text-5xl">
+          Five steps. No skipping.
+        </h2>
+      </div>
+      <div className="rail-fade mt-4 lg:hidden">
+        <ol className="rail">
           {processSteps.map((step, index) => (
-            <li key={step.title}>
-              <span className="num">{String(index + 1).padStart(2, "0")}</span>
-              <h3 className="font-display text-xl font-bold tracking-tight text-ivory">{step.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-mist">{step.text}</p>
+            <li key={step.title} className="rounded-[1.4rem] border border-line bg-panel p-4">
+              <p className="font-display text-sm font-bold text-amber">{String(index + 1).padStart(2, "0")}</p>
+              <h3 className="mt-2 font-display text-xl font-bold">{step.title}</h3>
+              <p className="mt-2 text-sm text-mist">{step.text}</p>
             </li>
           ))}
         </ol>
       </div>
+      <ol className="mx-auto mt-8 hidden max-w-6xl gap-3 lg:grid lg:grid-cols-5">
+        {processSteps.map((step, index) => (
+          <li key={step.title} className="rounded-[1.4rem] border border-line bg-panel p-4">
+            <p className="font-display text-sm font-bold text-amber">{String(index + 1).padStart(2, "0")}</p>
+            <h3 className="mt-3 font-display text-lg font-bold">{step.title}</h3>
+            <p className="mt-2 text-sm text-mist">{step.text}</p>
+          </li>
+        ))}
+      </ol>
     </section>
   )
 }
