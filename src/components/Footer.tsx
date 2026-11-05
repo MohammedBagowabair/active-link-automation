@@ -99,7 +99,6 @@ export function Footer() {
       </div>
       <div className="mx-auto flex max-w-6xl flex-col gap-2 border-t border-line px-5 py-6 text-xs text-mist md:flex-row md:items-center md:justify-between md:px-8">
         <p>© {year} Active Link Automation & Electrical. Nilai, Negeri Sembilan.</p>
-        <p>Photography from Unsplash. Coordinates 2.814138, 101.796191.</p>
       </div>
     </footer>
   )

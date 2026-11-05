@@ -171,7 +171,7 @@ function SheetBody({ onClose }: { onClose: () => void }) {
                   placeholder="For example: four cameras offline at a shop in Nilai."
                 />
               </div>
-              <p className="text-sm text-mist">Nothing is stored. The next step opens WhatsApp with this message.</p>
+              <p className="text-sm text-mist">The next step opens WhatsApp with your message.</p>
             </div>
           ) : null}
 

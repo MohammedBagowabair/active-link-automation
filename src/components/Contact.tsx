@@ -30,7 +30,7 @@ export function Contact() {
             Putra Point, Bandar Baru Nilai.
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-mist">
-            Quotes open WhatsApp on your phone. Nothing is sent to a server.
+            Send the details on WhatsApp, or call the Nilai team.
           </p>
           <button
             type="button"
