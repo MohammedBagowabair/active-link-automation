@@ -85,7 +85,7 @@ function SheetBody({ onClose }: { onClose: () => void }) {
         <div className="mx-auto mb-3 h-1.5 w-10 rounded-full bg-ivory/20" aria-hidden="true" />
         <div className="flex items-start justify-between gap-3">
           <div>
-            <p className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-amber">
+            <p className="text-xs font-medium text-mist">
               Quote · {step + 1} / 4
             </p>
             <h2 id={titleId} className="mt-1 font-display text-2xl font-bold tracking-tight">
@@ -108,7 +108,7 @@ function SheetBody({ onClose }: { onClose: () => void }) {
                   key={item}
                   type="button"
                   className={`press rounded-2xl border px-4 py-3 text-left ${
-                    property === item ? "border-amber bg-amber/10" : "border-line bg-ink"
+                    property === item ? "border-ink bg-ink text-white" : "border-line bg-white"
                   }`}
                   onClick={() => openQuote({ property: item })}
                 >
@@ -125,7 +125,7 @@ function SheetBody({ onClose }: { onClose: () => void }) {
                   key={item.id}
                   type="button"
                   className={`press rounded-2xl border px-4 py-3 text-left ${
-                    service === item.title ? "border-amber bg-amber/10" : "border-line bg-ink"
+                    service === item.title ? "border-ink bg-ink text-white" : "border-line bg-white"
                   }`}
                   onClick={() => openQuote({ service: item.title })}
                 >
@@ -136,7 +136,7 @@ function SheetBody({ onClose }: { onClose: () => void }) {
               <button
                 type="button"
                 className={`press rounded-2xl border px-4 py-3 text-left font-display text-lg font-bold ${
-                  service === "Not sure yet" ? "border-amber bg-amber/10" : "border-line bg-ink"
+                  service === "Not sure yet" ? "border-ink bg-ink text-white" : "border-line bg-white"
                 }`}
                 onClick={() => openQuote({ service: "Not sure yet" })}
               >
@@ -176,7 +176,7 @@ function SheetBody({ onClose }: { onClose: () => void }) {
           ) : null}
 
           {step === 3 ? (
-            <div className="rounded-2xl border border-line bg-ink p-4 text-sm leading-relaxed">
+            <div className="rounded-2xl border border-line bg-paper p-4 text-sm leading-relaxed">
               <p className="text-mist">Property</p>
               <p className="font-semibold">{property}</p>
               <p className="mt-3 text-mist">Service</p>
