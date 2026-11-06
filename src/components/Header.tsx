@@ -4,6 +4,7 @@ import { IconMark, IconPhone } from "./Icons.tsx";
 
 const links = [
   { href: "#services", label: "Services" },
+  { href: "#products", label: "Shop" },
   { href: "#build", label: "Build" },
   { href: "#cctv", label: "CCTV" },
   { href: "#electrical", label: "Electrical" },

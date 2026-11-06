@@ -8,6 +8,7 @@ import { Electrical } from "./sections/Electrical.tsx";
 import { Hero, Stats } from "./sections/Hero.tsx";
 import { Audiences, Areas, Partners, Process, Reviews } from "./sections/Proof.tsx";
 import { Services } from "./sections/Services.tsx";
+import { Products } from "./sections/Products.tsx";
 
 export function App() {
   return (
@@ -23,6 +24,7 @@ export function App() {
         <Hero />
         <Stats />
         <Services />
+        <Products />
         <Builder />
         <Diagnostics />
         <Electrical />

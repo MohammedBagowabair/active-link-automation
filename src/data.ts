@@ -66,6 +66,61 @@ export const serviceCatalog = [
 
 export type ServiceId = (typeof serviceCatalog)[number]["id"];
 
+
+export const productCatalog = [
+  {
+    id: "imou-wifi",
+    name: "Imou Wifi Camera",
+    image: "products/imou-wifi.jpg",
+    note: "WiFi camera stock from the workshop.",
+  },
+  {
+    id: "cat-cable",
+    name: "Cat6 Full Copper",
+    image: "products/cat-cable.jpg",
+    note: "Catalog name is Cat6 Full Copper. The cartons in this photo are printed CAT-5E.",
+  },
+  {
+    id: "l-bracket",
+    name: "L Bracket",
+    image: "products/l-bracket.jpg",
+    note: "Mounting brackets for camera installs.",
+  },
+  {
+    id: "em-lock",
+    name: "EM Lock",
+    image: "products/em-lock.jpg",
+    note: "Electromagnetic lock hardware.",
+  },
+  {
+    id: "tiandy-dual",
+    name: "Tiandy Dual Lens",
+    image: "products/tiandy-dual.jpg",
+    note: "Tiandy dual-lens camera kit.",
+  },
+  {
+    id: "tiandy-solar",
+    name: "Tiandy 4G Solar Wifi Kit",
+    image: "products/tiandy-solar.jpg",
+    note: "4G solar WiFi kit for remote sites.",
+  },
+  {
+    id: "ranger",
+    name: "Ranger Wifi Camera",
+    image: "products/ranger.jpg",
+    note: "Imou Ranger WiFi camera.",
+  },
+] as const;
+
+export type ProductId = (typeof productCatalog)[number]["id"];
+
+export function productWhatsApp(name: string) {
+  return whatsappHref(
+    `Hello Active Link, I am interested in ${name} from your catalog. Please tell me more.`,
+  );
+}
+
+
 export const sites = [
   {
     id: "home",
