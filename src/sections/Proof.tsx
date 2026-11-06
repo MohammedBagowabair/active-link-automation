@@ -88,7 +88,7 @@ function Stars() {
       {Array.from({ length: 5 }, (_, index) => (
         <path
           key={index}
-          fill="#00D4FF"
+          fill="#0058A8"
           transform={`translate(${index * 24} 0)`}
           d="M12 2.2 14.7 8l6.3.7-4.7 4.3 1.3 6.2L12 16.2 6.4 19.2 7.7 13 3 8.7 9.3 8Z"
         />

@@ -33,8 +33,8 @@ export function IconMark({ className }: IconProps) {
   return (
     <svg className={className} viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
       <rect x="1" y="1" width="30" height="30" rx="7" fill="#0058A8" />
-      <circle cx="16" cy="16" r="7.5" fill="none" stroke="#00D4FF" strokeWidth="1.75" />
-      <circle cx="16" cy="16" r="2.4" fill="#E7F6FF" />
+      <rect x="8" y="22" width="16" height="3" fill="#A21827" />
+      <circle cx="16" cy="13" r="4" fill="#ffffff" />
     </svg>
   );
 }

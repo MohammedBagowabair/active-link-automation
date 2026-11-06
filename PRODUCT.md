@@ -42,7 +42,7 @@ Workshop at PT 7166, Ground Floor, Jalan BBN 1/1A, Putra Point, Bandar Baru Nila
 
 ## Brand Commitments
 
-Name: Active Link Automation & Electrical. Voice is plain and specific, English, with the third review left in its original mix of Malay and English. Visual constraint from the brief, binding: futuristic tech, deep near-black, electric neon cyan `#00D4FF` as the glow, subtle violet secondary glow, glass/HUD panels, sparing grid or scan lines, flat glowing HUD (no 3D camera or perspective objects), glowing borders, neon calls to action, Plus Jakarta Sans or a similar tech sans. Brand blue `#0058A8` and red `#A21827` come from the Facebook logo and may appear in the logo treatment or sparingly; they are not a second theme. No dark-graphite/amber look and no smart-home pastel look.
+Name: Active Link Automation & Electrical. Voice is plain and specific, English, with the third review left in its original mix of Malay and English. Visual constraint, after the client rejected both the 3D camera and the neon cyan palette: the official brand blue `#0058A8`, deeper blue `#004A8C`, tint `#1186C9`, and accent red `#A21827` used sparingly. Flat only. No neon glow and no cyber HUD. Plus Jakarta Sans.
 
 ## Evidence on Hand
 
