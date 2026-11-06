@@ -19,7 +19,7 @@ OWN-WORLD: Void `#04060c`, working light `#00D4FF`, violet bloom `#8B6CFF` only 
 
 STORY: The visitor sees one team for CCTV, alarms, access, attendance, gates, automation, and electrical, trusts the rating, and calls, messages, or builds a quote that names the site and the systems.
 
-FIRST VIEWPORT: Edge-to-edge viewfinder. The top bracket is the wordmark and navigation. The H1 is Security. Automation. Electrical. at display scale, with One team. Complete solutions. as the lede directly under it. A CSS 3D camera sits in the right field at a resting tilt; its glow may cross the gutter, the glyphs stay clear. A full-width control strip at the bottom of the viewfinder holds Call, WhatsApp, and Build a quote. Coordinates sit in the lower bracket as data. The stats rail is the next section, not more hero.
+FIRST VIEWPORT: Edge-to-edge viewfinder. The top bracket is the wordmark and navigation. The H1 is Security. Automation. Electrical. at display scale, with One team. Complete solutions. as the lede directly under it. A flat glowing reticle sits in the right field; its glow may cross the gutter, the glyphs stay clear. There is no 3D camera. A full-width control strip at the bottom of the viewfinder holds Call, WhatsApp, and Build a quote. Coordinates sit in the lower bracket as data. The stats rail is the next section, not more hero.
 
 SIGNATURE: Build your system. Home, Shop, Factory, and Farm rewrite a line schematic and the ticked systems. The quote form is that same state. CCTV symptom keys are the second interaction. Motion is the lens sweep plus that reconfiguration. Reduced motion keeps both usable and still.
 

@@ -139,7 +139,7 @@ components:
 
 The Night-Shift Viewfinder is a near-black instrument for a Nilai workshop. The ground is void, the working light is electric cyan, and violet exists only as bloom. Density is one reading column on a 65ch measure, opening to a two-column viewfinder on a wide screen. Plus Jakarta Sans carries every line, from quiet body copy to the heavy uppercase display.
 
-Depth is glass, cyan edge light, and a soft lift. Corner brackets frame the first screen and repeat on the builder plate. The 56px grid and the scan lines stay inside that viewfinder. The camera and the system diagram are CSS and SVG. The map iframe is the only embedded picture, filtered back into the night palette.
+Depth is glass, cyan edge light, and a soft lift. Corner brackets frame the first screen and repeat on the builder plate. The 56px grid and the scan lines stay inside that viewfinder. The hero scope and the system diagram are flat CSS and SVG. The map iframe is the only embedded picture, filtered back into the night palette.
 
 The page keeps a dark color scheme and rejects a light cream section, a graphite-and-amber theme, and a smart-home pastel palette. Brand blue stays in the logo mark. Brand red is the Sunday closed badge, and the form also uses that red as the alert wash.
 
@@ -150,7 +150,7 @@ The page keeps a dark color scheme and rejects a light cream section, a graphite
 - Square HUD keys and circular instrument marks
 - Glass on the builder, the reviews, and the quote form
 - Grid and scan lines confined to the hero viewfinder
-- Lens sweep, tilt, and diagram settle, all stopped for reduced motion
+- Reticle sweep and diagram settle, both stopped for reduced motion
 
 ## Colors
 
@@ -164,7 +164,7 @@ The palette is a night instrument: a blue-black ground, one electric working lig
 
 ### Secondary
 
-- **Violet Bloom** (#8b6cff): Bloom only. It is painted at 42% opacity behind the camera, and at 22% opacity as a radial wash across the top of the system-builder plate. A cyan bloom at 28% opacity sits with it on the camera. Violet does not color type, buttons, or other sections.
+- **Violet Bloom** (#8b6cff): Bloom only. It is painted behind the flat hero reticle, and at 22% opacity as a radial wash across the top of the system-builder plate. Violet does not color type, buttons, or other sections.
 
 ### Tertiary
 
@@ -192,7 +192,7 @@ The palette is a night instrument: a blue-black ground, one electric working lig
 
 **The Working Light Rule.** Electric cyan is the only interactive accent. Every filled cyan control uses on-cyan text. Selection uses the same pair.
 
-**The Bloom Rule.** Violet is bloom behind the camera and a wash on the system-builder plate. It is not a second accent for type or controls.
+**The Bloom Rule.** Violet is bloom behind the flat hero reticle and a wash on the system-builder plate. It is not a second accent for type or controls.
 
 **The Mark Rule.** Brand blue belongs to the logo mark. Brand red fills the Sunday closed badge with white text, and the same red at 35% opacity is the form-alert wash. Red is not a button, a link, or a section.
 
@@ -222,28 +222,28 @@ The palette is a night instrument: a blue-black ground, one electric working lig
 
 The page is a single column in a container of min(1120px, calc(100% - 2rem)), so the side inset is 1rem. Sections pad 4.75rem on the block axis. The header is a sticky bar, 68px minimum, transparent until the page has moved 12px, then a void scrim. Section targets leave 5.25rem of scroll margin, and 5.5rem at the bottom while the dock is on screen.
 
-The hero viewfinder is edge to edge and, from 960px up, fills the screen under the header. Copy and the camera share the first row; Call, Build a quote, and WhatsApp form one full-width strip; coordinates sit in the lower row. Below 960px those stack in that same order: copy, controls, camera, coordinates.
+The hero viewfinder is edge to edge and, from 960px up, fills the screen under the header. Copy and the flat scope share the first row; Call, Build a quote, and WhatsApp form one full-width strip; coordinates sit in the lower row. Below 960px those stack in that same order: copy, controls, scope, coordinates.
 
-The grid is 56px, drawn in cyan at 8% opacity, masked to an ellipse over the camera side of the hero. Scan lines sit on the camera itself. Neither pattern repeats down the page.
+The grid is 56px, drawn in cyan at 8% opacity, masked to an ellipse over the scope side of the hero. A flat scan sweeps the reticle. Neither pattern repeats down the page.
 
 From 700px the site switch is four columns. From 800px the stats are three columns, service and audience rows split title and text, partner names sit in a row, and the FAQ and footer become columns. From 860px the builder pairs the diagram with the toggles. From 960px the contact block pairs the form with the hours. From 1100px the header links show inline, the menu button hides, and the bottom dock hides. Below that, the dock is fixed, body padding clears it, and the menu opens as a full-height list.
 
-**The Viewfinder Rule.** The 56px grid and the camera scan lines belong to the hero viewfinder. The rest of the page is the 1120px column and the breakpoints above, on void or on the night band.
+**The Viewfinder Rule.** The 56px grid and the reticle scan belong to the hero viewfinder. The rest of the page is the 1120px column and the breakpoints above, on void or on the night band.
 
 ## Elevation & Depth
 
-Depth is tonal and glassy, with a short shadow vocabulary. Flat void and the night band do most of the work. Glass plates, a void scrim, cyan hairlines, and soft lift mark the parts you can operate. The camera is a CSS box at a resting tilt of 14deg on X and -32deg on Y, in a 900px perspective. Pointer follow adds a few degrees only for a fine pointer. The builder diagram tilts less: 7deg and -10deg.
+Depth is tonal and glassy, with a short shadow vocabulary. Flat void and the night band do most of the work. Glass plates, a void scrim, cyan hairlines, and soft lift mark the parts you can operate. The hero scope is a flat reticle: rings, crosshair, and a vertical scan. There is no perspective, no preserve-3d, and no tilted object. The builder diagram is a flat SVG.
 
 ### Shadow Vocabulary
 
 - **Control lift** (`box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35), 0 0 22px rgba(0, 212, 255, 0.28)`): The filled primary button.
 - **Plate** (`box-shadow: 0 22px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(190, 244, 255, 0.16)`): Builder, reviews, and the quote form. Each also blurs the backdrop by 14px.
 - **Pressed toggle** (`box-shadow: inset 0 0 0 1px #00d4ff, 0 10px 18px rgba(0, 0, 0, 0.28)`): A system row that is on, over a 10% cyan fill.
-- **Iris** (`box-shadow: 0 0 14px #00d4ff`): The camera iris. Pips and timeline dots use a smaller black lift, 0 8px 12px or 0 6px 10px at 35% black.
+- **Core** (`box-shadow: 0 0 16px #00d4ff`): The flat reticle center. Pips and timeline dots use a smaller black lift, 0 8px 12px or 0 6px 10px at 35% black.
 
 The stuck header blurs 16px over the void scrim. The dock blurs 14px. Those are chrome, not plates.
 
-Motion is short. Tilt eases in 180ms. The lens sweep is a 3.4s linear loop. The diagram settles in 420ms. A pressed button shifts down 1px. Smooth scrolling is on. Under reduced motion, animation and transitions stop, the sweep is removed, the press shift is removed, and scrolling is instant. The resting camera angle stays, because it is not running.
+Motion is short and flat. The reticle sweep is a 3.6s linear loop. The diagram settles in 420ms. A pressed button shifts down 1px. Smooth scrolling is on. Under reduced motion, animation and transitions stop, the sweep is removed, the press shift is removed, and scrolling is instant.
 
 ### Named Rules
 
@@ -310,7 +310,7 @@ A CSS box in the hero, not a photograph. Faces are dark blue gradients with cyan
 
 ### System builder
 
-Home, Shop, Factory, and Farm are HUD keys. Each choice redraws an SVG line schematic in cyan and sets the on/off rows. A row that is on gets a 10% cyan fill, a cyan edge, and a filled flag. The diagram uses the same tilt language as the camera, with a short settle. The quote form reads this same state.
+Home, Shop, Factory, and Farm are HUD keys. Each choice redraws an SVG line schematic in cyan and sets the on/off rows. A row that is on gets a 10% cyan fill, a cyan edge, and a filled flag. The diagram is flat, with a short settle. The quote form reads this same state.
 
 ## Do's and Don'ts
 
@@ -320,8 +320,8 @@ Home, Shop, Factory, and Farm are HUD keys. Each choice redraws an SVG line sche
 - **Do** put on-cyan text on every filled cyan control, including the primary button, the pressed HUD key, and the dock's Call cell.
 - **Do** use Plus Jakarta Sans at the shipped weights: 400 for body, 600 for the hero lede, 700 for navigation and labels, 800 for display and controls.
 - **Do** keep the 16px by 2px cyan corner brackets on the viewfinder and on the builder plate.
-- **Do** draw the camera and the system diagram in CSS and SVG, and keep partner names as text.
-- **Do** stop animation and transitions, and hide the lens sweep, when reduced motion is requested. The camera's resting tilt may stay.
+- **Do** draw the hero scope and the system diagram flat, in CSS and SVG, and keep partner names as text.
+- **Do** stop animation and transitions, and hide the reticle sweep, when reduced motion is requested.
 - **Do** keep the focus ring: 2px solid instrument ink, 3px offset.
 
 ### Don't:
@@ -329,7 +329,7 @@ Home, Shop, Factory, and Farm are HUD keys. Each choice redraws an SVG line sche
 - **Don't** add a light cream section, a graphite-and-amber theme, or a pastel smart-home palette.
 - **Don't** use brand blue outside the logo mark.
 - **Don't** use brand red as a theme. The shipped uses are the filled Sunday badge and the form-alert wash.
-- **Don't** place violet on type, buttons, or sections beyond the camera bloom and the builder plate.
+- **Don't** place violet on type, buttons, or sections beyond the hero reticle and the builder plate.
 - **Don't** extend the viewfinder grid or the scan lines past the hero.
 - **Don't** make the glass plate the default section container.
-- **Don't** replace the CSS camera, the line schematic, or the text partner names with photography or redrawn partner logos.
+- **Don't** replace the flat scope, the line schematic, or the text partner names with photography, a 3D model, or redrawn partner logos.

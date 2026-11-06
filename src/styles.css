@@ -390,7 +390,7 @@ section,
   width: 100%;
 }
 
-.camera-col {
+.scope {
   order: 3;
   margin: 0;
 }
@@ -408,199 +408,112 @@ section,
   text-transform: uppercase;
 }
 
-.scene {
-  --w: 210px;
-  --h: 120px;
-  --d: 96px;
+.scope-plate {
   position: relative;
-  height: 200px;
   display: grid;
-  place-items: end center;
-  perspective: 900px;
-}
-
-.bloom {
-  position: absolute;
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  filter: blur(10px);
-  pointer-events: none;
-}
-
-.bloom-violet {
-  background: rgba(139, 108, 255, 0.42);
-  transform: translate(36px, -16px);
-}
-
-.bloom-cyan {
-  width: 160px;
-  height: 160px;
-  background: rgba(0, 212, 255, 0.28);
-  transform: translate(-10px, 24px);
-}
-
-.scanfield {
-  position: absolute;
-  inset: 18% 10%;
-  pointer-events: none;
-  background: repeating-linear-gradient(
-    to bottom,
-    transparent 0 3px,
-    rgba(0, 212, 255, 0.06) 3px 4px
-  );
-  mask-image: radial-gradient(circle, #000 15%, transparent 70%);
-}
-
-.pivot {
-  position: relative;
-  width: var(--w);
-  height: var(--h);
-  transform-style: preserve-3d;
-  transform: rotateX(calc(14deg + var(--tilt-x, 0deg))) rotateY(calc(-32deg + var(--tilt-y, 0deg)));
-  transition: transform 180ms ease-out;
-}
-
-.body {
-  position: absolute;
-  inset: 0;
-  transform-style: preserve-3d;
-}
-
-.face {
-  position: absolute;
-  background: linear-gradient(165deg, #16324c 0%, #071018 68%);
-  border: 1px solid rgba(0, 212, 255, 0.75);
-}
-
-.front,
-.back {
-  width: var(--w);
-  height: var(--h);
-}
-
-.front {
-  transform: translateZ(calc(var(--d) / 2));
-}
-
-.back {
-  background: #060d16;
-  transform: rotateY(180deg) translateZ(calc(var(--d) / 2));
-}
-
-.left,
-.right {
-  width: var(--d);
-  height: var(--h);
-  top: 0;
-  left: calc((var(--w) - var(--d)) / 2);
-}
-
-.right {
-  transform: rotateY(90deg) translateZ(calc(var(--w) / 2));
-}
-
-.left {
-  background: #0a1a2c;
-  transform: rotateY(-90deg) translateZ(calc(var(--w) / 2));
-}
-
-.top,
-.bottom {
-  width: var(--w);
-  height: var(--d);
-  left: 0;
-  top: calc((var(--h) - var(--d)) / 2);
-}
-
-.top {
-  background: linear-gradient(#1a4468, #0c2236);
-  transform: rotateX(90deg) translateZ(calc(var(--h) / 2));
-}
-
-.bottom {
-  background: #050a10;
-  transform: rotateX(-90deg) translateZ(calc(var(--h) / 2));
-}
-
-.stem,
-.shoe {
-  position: absolute;
-  background: #10283c;
-  border: 1px solid rgba(0, 212, 255, 0.7);
-  transform: translateZ(10px);
-}
-
-.stem {
-  width: 14px;
-  height: 62px;
-  left: calc(50% - 7px);
-  top: -62px;
-}
-
-.shoe {
-  width: 74px;
-  height: 12px;
-  left: calc(50% - 37px);
-  top: -72px;
-}
-
-.lens {
-  position: absolute;
-  width: 36%;
-  aspect-ratio: 1;
-  left: 11%;
-  top: 50%;
-  translate: 0 -50%;
-  border-radius: 50%;
+  place-items: center;
+  min-height: 210px;
   overflow: hidden;
+  border: 1px solid rgba(0, 212, 255, 0.5);
   background:
-    radial-gradient(circle at 38% 34%, rgba(0, 212, 255, 0.5), transparent 26%),
-    radial-gradient(circle at 50% 50%, #031018 0 28%, #0a3048 30% 48%, #02060a 50%);
+    radial-gradient(circle at 50% 42%, rgba(139, 108, 255, 0.32), transparent 46%),
+    radial-gradient(circle at 50% 58%, rgba(0, 212, 255, 0.16), transparent 58%),
+    #070b14;
   box-shadow:
-    0 0 0 7px #071420,
-    0 0 0 9px rgba(0, 212, 255, 0.9),
-    0 12px 24px rgba(0, 0, 0, 0.45);
+    0 18px 36px rgba(0, 0, 0, 0.4),
+    inset 0 0 32px rgba(0, 212, 255, 0.08);
 }
 
-.ring {
+.scope-plate .corners {
+  inset: 8px;
+}
+
+.reticle {
+  position: relative;
+  width: min(168px, 42vw);
+  aspect-ratio: 1;
+}
+
+.reticle-ring,
+.reticle-cross,
+.reticle-core,
+.reticle-sweep {
   position: absolute;
+}
+
+.reticle-ring {
   border-radius: 50%;
   border: 1px solid rgba(0, 212, 255, 0.75);
+  box-shadow: 0 0 16px rgba(0, 212, 255, 0.22);
 }
 
-.ring-a {
-  inset: 14px;
+.reticle-ring.r1 {
+  inset: 0;
 }
 
-.ring-b {
-  inset: 24px;
+.reticle-ring.r2 {
+  inset: 18%;
 }
 
-.iris {
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  left: 50%;
+.reticle-ring.r3 {
+  inset: 36%;
+}
+
+.reticle-cross.h {
   top: 50%;
-  translate: -50% -50%;
+  right: 6%;
+  left: 6%;
+  height: 1px;
+  background: rgba(0, 212, 255, 0.65);
+}
+
+.reticle-cross.v {
+  top: 6%;
+  bottom: 6%;
+  left: 50%;
+  width: 1px;
+  background: rgba(0, 212, 255, 0.65);
+}
+
+.reticle-core {
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background: var(--cyan);
-  box-shadow: 0 0 14px var(--cyan);
+  box-shadow: 0 0 16px var(--cyan);
+  translate: -50% -50%;
 }
 
-.sweep {
-  position: absolute;
-  left: 0;
+.reticle-sweep {
   right: 0;
-  height: 18%;
-  background: linear-gradient(180deg, transparent, rgba(0, 212, 255, 0.55), transparent);
-  animation: sweep 3.4s linear infinite;
+  left: 0;
+  height: 22%;
+  background: linear-gradient(180deg, transparent, rgba(0, 212, 255, 0.5), transparent);
+  animation: sweep 3.6s linear infinite;
 }
 
-.camera-col figcaption,
+.scope-tags {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 0.85rem;
+  left: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--cyan);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.scope figcaption,
 .drawing-frame figcaption {
-  margin-top: 0.35rem;
+  margin-top: 0.55rem;
   color: var(--muted);
   font-size: 0.92rem;
   text-align: center;
@@ -726,13 +639,7 @@ section,
 }
 
 .drawing-frame {
-  perspective: 900px;
   margin: 0;
-}
-
-.drawing-tilt {
-  transform: rotateX(calc(7deg + var(--tilt-x, 0deg))) rotateY(calc(-10deg + var(--tilt-y, 0deg)));
-  transition: transform 180ms ease-out;
 }
 
 .drawing {
@@ -1390,7 +1297,7 @@ fieldset {
     grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
     grid-template-rows: 1fr auto auto;
     grid-template-areas:
-      "copy cam"
+      "copy scope"
       "controls controls"
       "meta meta";
     column-gap: 2rem;
@@ -1402,9 +1309,9 @@ fieldset {
     grid-area: copy;
   }
 
-  .camera-col {
+  .scope {
     order: 0;
-    grid-area: cam;
+    grid-area: scope;
   }
 
   .controls {
@@ -1419,11 +1326,12 @@ fieldset {
     grid-area: meta;
   }
 
-  .scene {
-    --w: 268px;
-    --h: 152px;
-    --d: 124px;
-    height: 320px;
+  .scope-plate {
+    min-height: 280px;
+  }
+
+  .reticle {
+    width: 210px;
   }
 
   .controls {
@@ -1505,7 +1413,7 @@ fieldset {
     transition: none !important;
   }
 
-  .sweep {
+  .reticle-sweep {
     display: none;
   }
 

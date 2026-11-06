@@ -1,5 +1,5 @@
 import { phoneTel, whatsappUrl } from "../data.ts";
-import { CameraRig } from "../components/CameraRig.tsx";
+import { ScopePanel } from "../components/ScopePanel.tsx";
 import { IconChat, IconPhone } from "../components/Icons.tsx";
 
 export function Hero() {
@@ -25,7 +25,7 @@ export function Hero() {
               automation, and electrical. Workshop in Bandar Baru Nilai since 2014.
             </p>
           </div>
-          <CameraRig />
+          <ScopePanel />
           <div className="controls">
             <a className="btn btn-primary" href={`tel:${phoneTel}`}>
               <IconPhone />

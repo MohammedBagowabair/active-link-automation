@@ -1,11 +1,8 @@
 import { serviceCatalog, serviceName, sites, type SiteId } from "../data.ts";
 import { useQuote } from "../quote-state.ts";
-import { usePrefersReducedMotion, useTilt } from "../useTilt.ts";
 
 export function Builder() {
   const quote = useQuote();
-  const reduced = usePrefersReducedMotion();
-  const tiltRef = useTilt(!reduced);
   const site = sites.find((item) => item.id === quote.site) ?? sites[0];
   const activeNames = serviceCatalog
     .filter((item) => quote.services.includes(item.id))
@@ -36,9 +33,7 @@ export function Builder() {
           <p className="blurb">{site.blurb}</p>
           <div className="builder-grid">
             <figure className="drawing-frame">
-              <div className="drawing-tilt" ref={tiltRef}>
-                <Scene site={quote.site} active={quote.services} />
-              </div>
+              <Scene site={quote.site} active={quote.services} />
               <figcaption>{site.drawing}</figcaption>
             </figure>
             <div className="toggles" role="group" aria-label="Systems to include">
